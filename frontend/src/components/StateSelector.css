@@ -1,0 +1,18 @@
+/* StateSelector.css */
+.state-selector {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .state-selector label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .state-selector select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  

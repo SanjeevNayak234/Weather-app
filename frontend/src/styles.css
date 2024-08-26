@@ -1,0 +1,148 @@
+/* Ensure the container covers the full viewport */
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  background-image: url('./weather.jpg'); /* Ensure correct path */
+  background-size: cover;
+  background-position: center;
+  animation: backgroundAnimation 30s infinite alternate; /* Add background animation */
+}
+
+/* Background animation */
+@keyframes backgroundAnimation {
+  0% {
+    filter: brightness(100%);
+  }
+  100% {
+    filter: brightness(80%);
+  }
+}
+
+/* Style for the main content box */
+.main-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8); /* Dark background for better contrast */
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px; /* Adjust as needed */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Adds shadow for depth */
+  text-align: center;
+  animation: boxAnimation 1s ease-in-out; /* Add box animation */
+}
+
+/* Box animation */
+@keyframes boxAnimation {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* General text animation */
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style for headings and text elements */
+h1, h2, p, .forecast-info {
+  animation: textAnimation 1s ease-out;
+  color: white;
+  margin: 10px;
+}
+
+/* Style for the weather info container */
+.weather-info {
+  color: white;
+  margin-bottom: 20px;
+  animation: textAnimation 1s ease-out; /* Add text fade-in animation */
+}
+
+/* Style for the state selector */
+.state-select {
+  margin-top: 20px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px; /* Limits width for smaller devices */
+  font-size: 16px;
+  transition: background 0.3s ease; /* Add transition for hover effect */
+  animation: textAnimation 1s ease-out; /* Add text fade-in animation */
+}
+
+.state-select:hover {
+  background: rgba(255, 255, 255, 1); /* Full opacity on hover */
+}
+
+/* Button styles */
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
+  animation: textAnimation 1s ease-out; /* Add text fade-in animation */
+}
+
+button:hover {
+  background: #0056b3;
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Style for the forecast info container */
+.forecast-info {
+  color: white;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.9); /* Darker background for readability */
+  border-radius: 15px;
+  margin-top: 20px;
+  width: 100%;
+  animation: textAnimation 1s ease-out; /* Add text fade-in animation */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .main-box {
+    width: 95%;
+    padding: 20px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .state-select {
+    font-size: 14px;
+  }
+}

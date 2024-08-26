@@ -1,0 +1,19 @@
+.weather-display {
+    background-color: #f0f8ff; /* Light background color */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Padding */
+    margin: 16px 0; /* Margin */
+    text-align: center; /* Center-align text */
+  }
+  
+  .weather-display h2 {
+    margin: 0 0 10px; /* Margin bottom */
+    color: black; /* Black text color */
+  }
+  
+  .weather-display p {
+    margin: 5px 0; /* Margin top and bottom */
+    color: black; /* Black text color */
+  }
+  
